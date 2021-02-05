@@ -6,45 +6,46 @@
     <p>{{ message }}</p>
     <div>
         <form method="post" action="/update">
-            <p>ID</p>
-            <input type="hidden" name="id" value="{{ hotel['id'] }}">
-            <p>名前</p>
-            <input type="text" name="name" value="{{ hotel['name']|default('', True) }}">
-            <p>EN_NAME</P>
-            <input type="text" name="name_en" value="{{ hotel['name_en']|default('', True)  }}">
-            <p>写真</p>
-            <input type="text" name="img_src" value="{{ hotel['img_src']|default('', True)  }}">
-            <p>地区</p>
-            <select name="district_id">
-                {% for district in districts %}
-                <option value="{{ district['id'] }}"
-                        {% if district['id'] == hotel['district_id'] %} selected
-                    {% endif %}
-                >{{ district['name']}}</option>
-                {% endfor %}
-            </select>
-            <P>住所</p>
-            <input type="text" name="address" value="{{ hotel['address']|default('', True)  }}">
-            <p>値段</P>
-            <input type="number" name="price" value="{{ hotel['price']|default('', True)  }}" >
-            <P>最寄り駅</p>
-            <input type="text" name="station" value="{{ hotel['station']|default('', True)  }}">
-            <p>ホテル紹介</P>
-            <textarea name="summary">{{ hotel['summary']|default('', True) }} </textarea>
-            <P>ホテル情報</p>
-            <textarea name="introduction">{{ hotel['introduction']|default('', True) }} </textarea>
-<!--            <p>ホテル紹介</P>-->
-<!--            <input type="text" name="summary" value="{{ hotel['summary'] }}" >-->
-<!--            <P>ホテル情報</p>-->
-<!--            <input type="text" name="introduction" value="{{ hotel['introduction'] }}" >-->
-            <P>部屋サイズ</p>
-            <input type="text" name="room_size" value="{{ hotel['room_size']|default('', True)  }}">
-            <p>人数</P>
-            <input type="text" name="max_ppl" value="{{ hotel ['max_ppl']|default('', True)  }}">
-            <P>施設</p>
-            <input type="text" name="equipments" value="{{ hotel['equipments']|default('', True) }}">
-            <p><input type="submit"></p>
-
+            <div class="form-group">
+                <p>ID</p>
+                <input type="hidden" name="id" value="{{ hotel['id'] }}">
+                <p>名前</p>
+                <input class="form-control'" type="text" name="name" value="{{ hotel['name']|default('', True) }}">
+                <p>EN_NAME</P>
+                <input type="text" name="name_en" value="{{ hotel['name_en']|default('', True)  }}">
+                <p>写真</p>
+                <input type="text" name="img_src" value="{{ hotel['img_src']|default('', True)  }}">
+                <p>地区</p>
+                <select name="district_id">
+                    {% for district in districts %}
+                    <option value="{{ district['id'] }}"
+                            {% if district['id'] == hotel['district_id'] %} selected
+                        {% endif %}
+                    >{{ district['name']}}</option>
+                    {% endfor %}
+                </select>
+                <P>住所</p>
+                <input type="text" name="address" value="{{ hotel['address']|default('', True)  }}">
+                <p>値段</P>
+                <input type="number" name="price" value="{{ hotel['price']|default('', True)  }}" >
+                <P>最寄り駅</p>
+                <input type="text" name="station" value="{{ hotel['station']|default('', True)  }}">
+                <p>ホテル紹介</P>
+                <textarea name="summary">{{ hotel['summary']|default('', True) }} </textarea>
+                <P>ホテル情報</p>
+                <textarea name="introduction">{{ hotel['introduction']|default('', True) }} </textarea>
+    <!--            <p>ホテル紹介</P>-->
+    <!--            <input type="text" name="summary" value="{{ hotel['summary'] }}" >-->
+    <!--            <P>ホテル情報</p>-->
+    <!--            <input type="text" name="introduction" value="{{ hotel['introduction'] }}" >-->
+                <P>部屋サイズ</p>
+                <input type="text" name="room_size" value="{{ hotel['room_size']|default('', True)  }}">
+                <p>人数</P>
+                <input type="text" name="max_ppl" value="{{ hotel ['max_ppl']|default('', True)  }}">
+                <P>施設</p>
+                <input type="text" name="equipments" value="{{ hotel['equipments']|default('', True) }}">
+                <p><input type="submit"></p>
+            </div>
         </form>
 
     </div>
