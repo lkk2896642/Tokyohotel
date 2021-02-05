@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <p></p>
+    <h3>{{ hotel["name"] }}</h3>
+    <p></p>
+    <p>{{ message }}</p>
+
+    <div>
+
+
+        <form method="post" action="/delete">
+
+            <input type="hidden" name="id" value="{{ hotel['id'] }}">
+            <p><input type="submit"></p>
+
+        </form>
+
+    </div>
+
+{% endblock %}

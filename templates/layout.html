@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tokyo house</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+    
+    .card-title {
+      font-family:"Times New Roman", Times, serif;
+      font-weight:bold;
+    }
+
+    .bold {
+      font-weight:bold
+    }
+    
+   
+    </style>
+
+  </head>
+
+  <body>
+    <p></p>
+      <div class="jumbotron text-center" style="margin-bottom:0">
+          <h1>東京民宿 Tokyo House</h1>
+          <p>東京隨便住       Escape to Japan</p> 
+      </div>
+
+      <nav class="navbar navbar-expand-lg bg-info navbar-dark nav justify-content-center">
+          <a class="navbar-brand" href="/">首頁</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+          <ul class="navbar-nav">
+                <li> 
+                <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+                </li>
+
+                <li>
+                <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/a">房間</a>
+                </li>
+
+                <li> 
+                <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+                </li>
+
+                <li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">價錢</a>
+                </li>
+
+                <li> 
+                <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+                </li>
+
+                <li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">預約</a>
+                </li> 
+              </ul>
+            
+        </nav>
+
+      <div class="container">
+
+         {% block content %}{% endblock %}
+
+      </div>
+
+
+      <br>
+
+      <footer class="py-2 bg-dark text-light">
+        <div class="container text-center">
+            <P>Copyright © 菊島株式会社 All Rights Reserved.</P>
+            <P> Add: 3-33-333 Apple vella Shinnjuku Tokyo Japan</P>
+            <P> Tel:+81-03-1234-999999</P>
+          </div>
+      </footer>
+
+  </body>
+
+
+
+
+</html>
